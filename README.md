@@ -1,41 +1,66 @@
-# Git-Crashkurs"
+# Git-Crashkurs
 
 ## Git Basics
 
-git config --global user.name "Dein Name"
-git config --global user.email "deine.email@example.com"
+    git config --global user.name "Dein Name"
+    git config --global user.email "deine.email@example.com"
 
-#### Repo Initialisieren
+### Repo Initialisieren
 
-git init
-git add <file>
-git commit -m "Commit-Nachricht"
+    git init
 
-git log
-git log --oneline
+### Dateien hinzufügen und commiten
 
-git show <commit-id>
+    git add <file>
+    git commit -m "Commit-Nachricht"
 
-git revert <commit-id>
-git reset <commit-id>
+### Commit-Verlauf anzeigen
+
+    git log
+    git log --oneline
+
+### Commits anzeigen und rückgängig machen
+
+    git show <commit-id>
+    git revert <commit-id>
+    git reset <commit-id>
+
+### Stashing
+
+    git stash save "Stash-Nachricht"
+    git stash pop <stash-id>
+    git stash drop <stash-id>
 
 ## Github
 
-git remote add origin <repository-url>
-git fetch
-git pull
+### Repository verbinden
 
-### Branching
+    git remote add origin <repository-url>
 
-git checkout -b <branch-name>
-git checkout <branch-name>
+### Änderungen von Github holen
 
-git merge <branch-name>
-git branch -d <branch-name>
+    git fetch
+    git pull
 
-git checkout -- <datei>
+## Branching
 
-## Git advanced concepts
+### Branch erstellen und wechseln
 
-git stash save "Stash-Nachricht"
-git stash
+    git checkout -b <branch-name>
+
+### Zu einem existierenden Branch wechseln
+
+    git checkout <branch-name>
+
+### Branch löschen
+
+    git branch -d <branch-name>
+
+### Branches zusammenführen
+
+    git merge <branch-name>
+    git rebase <branch-name>
+
+### Commits squashen
+
+    git rebase -i HEAD~3
