@@ -61,6 +61,6 @@
     git merge <branch-name>
     git rebase <branch-name>
 
-### Commits squashen aa
+### Commits squashen aas
 
     git rebase -i HEAD~3
